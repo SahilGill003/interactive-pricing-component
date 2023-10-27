@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./styles.css">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<title>Frontend Mentor Challenge</title>
+	</head>
+
+	<body>
+		<main>
+			<article id="main-article">
+				<h3 class="main-heading">Simple, traffic-based pricing</h3>
+				<p class="sub-heading">Sign-up for our 30-day trial. No credit card required. </p>
+			</article>
+			<section class="card">
+				<article class="card-top-section">
+					<fieldset id="pricing-fieldset">
+						<div id="pageview-num">
+							<p class="price-slider"></p>
+							<p>Pageviews</p>
+						</div>
+						<div id="custom-input-range">
+							<div id="range">
+								<div id="filled"></div>
+							</div>
+							<div id="slider"></div>
+						</div>
+						<div id="price-per-month">
+							<p>$
+							<p class="price-slider"></p>
+							</p>
+							<p>/ month</p>
+						</div>
+					</fieldset>
+					<fieldset id="billings">
+						<label for="switch-billing">
+							<p>Monthly Billing</p>
+							<input type="checkbox" id="switch-billing">
+							<p> Yearly Billing</p>
+						</label>
+					</fieldset>
+				</article>
+				<article class="card-bottom-section">
+					<ul class="features">
+						<li>
+							Unlimited websites
+						</li>
+						<li>
+							100% data ownership
+						</li>
+						<li>
+							Email reports
+						</li>
+					</ul>
+					<button type="button" aria-label="start my trial">Start my trial</button>
+				</article>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+
+</html>

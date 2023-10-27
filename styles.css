@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url('./images/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  font-family: 'Manrope';
+  background-color: hsl(230, 100%, 99%);
+}
+
+fieldset {
+  all: unset;
+}
+
+p {
+  color: hsl(225, 20%, 60%);
+}
+
+li {
+  list-style: url('./images/icon-check.svg');
+  list-style-position: inside;
+}
+
+main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+#main-article {
+  background-image: url('./images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem 1rem;
+}
+
+#main-article {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#main-article p {
+  margin: 10px auto;
+  font-size: 14px;
+  line-height: 1.75;
+  width: 75%;
+  color: hsl(225, 20%, 60%);
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 15px 55px 2px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4rem;
+}
+
+.card-top-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+
+}
+
+#pricing-fieldset {
+  display: grid;
+  padding: 0 0.5rem;
+  text-align: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#custom-input-range {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#range {
+  width: 100%;
+  height: 10px;
+  background: hsl(224, 65%, 95%);
+  border-radius: 5px;
+}
+
+#filled {
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background: hsl(174, 77%, 80%);
+  transition: all 150ms ease;
+}
+
+#slider {
+  position: absolute;
+  background: url('./images/icon-slider.svg');
+  background-size: 25px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(174, 86%, 45%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 15px 15px 2px hsl(174, 86%, 80%);
+  left: 0%;
+  touch-action: none;
+  transition: all 150ms ease;
+}
+
+#slider:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+#slider:focus {
+  background-color: hsl(174, 86%, 35%);
+  cursor: grabbing;
+}
+
+#slider:active {
+  background-color: hsl(174, 86%, 35%);
+  cursor: grabbing;
+}
+
+#pageview-num p {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+#pageview-num,
+#price-per-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#price-per-month p:first-child,
+#price-per-month .price-slider {
+  font-size: xx-large;
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+}
+
+#billings {
+  width: 100%;
+}
+
+#billings label {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+#billings p:first-child {
+  text-align: right;
+}
+
+#billings p:last-child {
+  text-align: left;
+}
+
+#billings,
+.features li {
+  color: hsl(225, 20%, 60%);
+  font-size: 14px;
+}
+
+input {
+  appearance: none;
+  width: 50px;
+  height: 26px;
+  border: none;
+  border-radius: 20px;
+  background-color: hsl(223, 50%, 87%);
+  position: relative;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+input::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input:checked::after {
+  right: 4px;
+}
+
+input:hover {
+  background-color: hsl(174, 86%, 45%);
+}
+
+
+[for="switch-billing"] p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#switch-billing+p::after {
+  margin: auto;
+  content: '25%';
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 10px;
+  padding: 1px 4px;
+  margin-left: 5px;
+  font-size: x-small;
+  font-weight: 800;
+}
+
+.card-bottom-section {
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.card-bottom-section,
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features {
+  gap: 0.75rem;
+}
+
+.card-bottom-section button {
+  color: hsl(225, 20%, 60%);
+  background-color: hsl(227, 35%, 25%);
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.card-bottom-section button:hover {
+  color: white;
+}
+
+@media (min-width: 900px) {
+  #slider {
+    touch-action: auto;
+  }
+
+  #pricing-fieldset {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #price-per-month {
+    grid-area: 1/2/2/3;
+  }
+
+  .price-slider {
+    grid-column: 1/3;
+  }
+
+  #custom-input-range {
+    grid-column: 1/3;
+  }
+
+  #switch-billing+label::after {
+    content: '25% discount';
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 2px 6px;
+  }
+
+  .card-bottom-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+  }
+
+  .features {
+    align-items: unset;
+  }
+}
